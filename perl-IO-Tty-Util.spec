@@ -1,15 +1,13 @@
 %define upstream_name    IO-Tty-Util
-%define upstream_version 0.03
-
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	6
+Version:    0.03
+Release:	7
 
 Summary:    No summary found
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{version}.tar.gz
 
 
 BuildRequires:	make
@@ -22,7 +20,7 @@ the IO::Tty::Util manpage provides basic Perl bindings to the 'openpty' and
 implementation of the 'forkpty' function.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
